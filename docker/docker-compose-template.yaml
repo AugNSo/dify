@@ -96,7 +96,8 @@ services:
 
   # The DifySandbox
   sandbox:
-    image: langgenius/dify-sandbox:0.2.10
+    # image: langgenius/dify-sandbox:0.2.10
+    image: svcvit/dify-sandbox-py:0.1.2
     restart: always
     environment:
       # The DifySandbox configurations
