@@ -49,6 +49,7 @@ refresh_pattern .		0	20%	4320
 ################################## Reverse Proxy To Sandbox ################################
 http_port ${REVERSE_PROXY_PORT} accel vhost
 cache_peer ${SANDBOX_HOST} parent ${SANDBOX_PORT} 0 no-query originserver
+cache_peer_access ${SANDBOX_HOST} deny localnet
 acl src_all src all
 http_access allow src_all
 
